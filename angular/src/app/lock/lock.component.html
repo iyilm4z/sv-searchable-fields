@@ -1,0 +1,10 @@
+<fieldset>
+    <legend><b>modelType: </b>{{ model?.modelType }} | <b>searchingWeight: </b>{{ model?.searchingWeight }}</legend>
+    <b>type: </b>{{ model?.type }}
+    <b>name: </b>{{ model?.name }} 
+    <b>serialNumber: </b>{{ model?.serialNumber }}
+    <b>floor: </b>{{ model?.floor }}
+    <b>roomNumber: </b>{{ model?.roomNumber }}
+    <b>description: </b>{{ model?.description }}
+    <app-building [model]="model?.building"></app-building>
+</fieldset>

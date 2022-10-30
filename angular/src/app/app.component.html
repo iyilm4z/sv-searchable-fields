@@ -1,0 +1,15 @@
+<div style="display: table; margin: 0 auto">
+  <input placeholder="Search.." type="text" [(ngModel)]="textToSearch" />
+  <button style="margin-left: 10px" (click)="onSearchClick()">Go</button>
+  <button style="margin-left: 10px" (click)="clear()">Clear</button>
+</div>
+
+<ng-container *ngFor="let model of dynamicSearchResult">
+  <app-group *ngIf="model.modelType === 'Group'" [model]="model"></app-group>
+  <app-media *ngIf="model.modelType === 'Media'" [model]="model"></app-media>
+  <app-building
+    *ngIf="model.modelType === 'Building'"
+    [model]="model"
+  ></app-building>
+  <app-lock *ngIf="model.modelType === 'Lock'" [model]="model"> </app-lock>
+</ng-container>

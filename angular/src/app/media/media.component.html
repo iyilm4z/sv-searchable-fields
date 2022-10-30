@@ -1,0 +1,8 @@
+<fieldset>
+    <legend><b>modelType: </b>{{ model?.modelType }} | <b>searchingWeight: </b>{{ model?.searchingWeight }}</legend>
+    <b>type: </b>{{ model?.type }}
+    <b>owner: </b>{{ model?.owner }} 
+    <b>description: </b>{{ model?.description }}
+    <b>serialNumber: </b>{{ model?.serialNumber }}
+    <app-group [model]="model?.group"></app-group>
+</fieldset>
